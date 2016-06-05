@@ -4,5 +4,5 @@ Meteor.publish('recipes', function(){
 
 Meteor.publish('singleRecipe', function(id){
 	check(id, String)
-	return Recipes.find({author: this.userId});
+	return Recipes.find({_id: id});
 });
